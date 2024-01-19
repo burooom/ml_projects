@@ -18,24 +18,24 @@
 - По результатам проведенного методом кросс-валидации обучения была отобрана регрессионная модель, показавшая лучшие результаты.
 
 ## Стек технологий
-python
-pandas
-numpy
-matplotlib
-seaborn
-scipy.stats
-sklearn.model_selection.cross_val_score
-sklearn.model_selection.GridSearchCV
-sklearn.model_selection.RandomizedSearchCV
-sklearn.model_selection.train_test_split
-sklearn.metrics.mean_absolute_error
-sklearn.preprocessing.StandardScaler
-sklearn.preprocessing.PolynomialFeatures
-sklearn.preprocessing.SplineTransformer
-sklearn.pipeline.Pipeline
-sklearn.dummy.DummyRegressor
-sklearn.ensemble.RandomForestRegressor
-sklearn.ensemble.IsolationForest
-sklearn.linear_model.LinearRegression
-lightgbm.LGBMRegressor
-lightgbm.plot_importance
+- python
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- scipy.stats
+- sklearn.model_selection.cross_val_score
+- sklearn.model_selection.GridSearchCV
+- sklearn.model_selection.RandomizedSearchCV
+- sklearn.model_selection.train_test_split
+- sklearn.metrics.mean_absolute_error
+- sklearn.preprocessing.StandardScaler
+- sklearn.preprocessing.PolynomialFeatures
+- sklearn.preprocessing.SplineTransformer
+- sklearn.pipeline.Pipeline
+- sklearn.dummy.DummyRegressor
+- sklearn.ensemble.RandomForestRegressor
+- sklearn.ensemble.IsolationForest
+- sklearn.linear_model.LinearRegression
+- lightgbm.LGBMRegressor
+- lightgbm.plot_importance

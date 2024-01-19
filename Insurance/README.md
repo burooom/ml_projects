@@ -14,9 +14,9 @@
 3. Алгоритм протестирован с использованием кодированных и некодированных признаков, получены практически идентичные результаты (по коэффициенту $R^2$), что значит, что алгоритм шифрования признаков не приводит к значимому ухудшению метрик качества линейной регресии.
 
 ## Стек технологий
-python
-pandas
-numpy
-matplotlib
-sklearn.linear_model.LinearRegression
-sklearn.metrics.r2_score
+- python
+- pandas
+- numpy
+- matplotlib
+- sklearn.linear_model.LinearRegression
+- sklearn.metrics.r2_score

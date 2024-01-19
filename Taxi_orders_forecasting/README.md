@@ -14,21 +14,21 @@
 - Заказчику рекомендавана полученная модель
 
 ## Стек технологий
-python
-pandas
-numpy
-matplotlib
-sklearn.model_selection.GridSearchCV
-sklearn.model_selection.RandomizedSearchCV
-sklearn.model_selection.train_test_split
-sklearn.model_selection.TimeSeriesSplit
-sklearn.metrics.mean_squared_error
-sklearn.preprocessing.StandardScaler
-sklearn.preprocessing.PolynomialFeatures
-sklearn.ensemble.RandomForestRegressor
-sklearn.linear_model.LinearRegression
-catboost.CatBoostRegressor
-lightgbm.LGBMRegressor
-lightgbm.plot_importance
-statsmodels.tsa.seasonal.seasonal_decompose
+- python
+- pandas
+- numpy
+- matplotlib
+- sklearn.model_selection.GridSearchCV
+- sklearn.model_selection.RandomizedSearchCV
+- sklearn.model_selection.train_test_split
+- sklearn.model_selection.TimeSeriesSplit
+- sklearn.metrics.mean_squared_error
+- sklearn.preprocessing.StandardScaler
+- sklearn.preprocessing.PolynomialFeatures
+- sklearn.ensemble.RandomForestRegressor
+- sklearn.linear_model.LinearRegression
+- catboost.CatBoostRegressor
+- lightgbm.LGBMRegressor
+- lightgbm.plot_importance
+- statsmodels.tsa.seasonal.seasonal_decompose
 

@@ -13,13 +13,13 @@
 - Рекомендован к разработке регион с максимальной прибылью и уровнем риска меньше критического.
 
 ## Стек технологий
-python
-pandas
-numpy
-matplotlib
-sklearn.model_selection.train_test_split
-sklearn.model_selection.cross_val_score
-sklearn.linear_model.LinearRegression
-sklearn.preprocessing.StandardScaler
-sklearn.preprocessing.PolynomialFeatures
-sklearn.metrics.mean_squared_error
+- python
+- pandas
+- numpy
+- matplotlib
+- sklearn.model_selection.train_test_split
+- sklearn.model_selection.cross_val_score
+- sklearn.linear_model.LinearRegression
+- sklearn.preprocessing.StandardScaler
+- sklearn.preprocessing.PolynomialFeatures
+- sklearn.metrics.mean_squared_error

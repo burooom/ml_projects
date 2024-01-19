@@ -12,22 +12,22 @@
 - Цели работы достигнуты: построена ML-модель, способная предсказывать отток клиентов с большим показателем f1-меры, чем установленны заказчиком минимум.
 
 ## Стек технологий
-pandas
-numpy
-matplotlib
-tqdm
-sklearn.linear_model.LogisticRegression
-sklearn.tree.DecisionTreeClassifier
-sklearn.ensemble.RandomForestClassifier
-sklearn.ensemble.VotingClassifier
-sklearn.utils.shuffle
-sklearn.preprocessing.StandardScaler
-sklearn.preprocessing.PolynomialFeatures
-sklearn.preprocessing.OneHotEncoder
-sklearn.preprocessing.SplineTransformer
-sklearn.metrics.f1_score
-sklearn.metrics.roc_auc_score
-sklearn.metrics.roc_curve
-sklearn.model_selection.train_test_split
-sklearn.model_selection.ParameterSampler
-xgboost.XGBClassifier
+- pandas
+- numpy
+- matplotlib
+- tqdm
+- sklearn.linear_model.LogisticRegression
+- sklearn.tree.DecisionTreeClassifier
+- sklearn.ensemble.RandomForestClassifier
+- sklearn.ensemble.VotingClassifier
+- sklearn.utils.shuffle
+- sklearn.preprocessing.StandardScaler
+- sklearn.preprocessing.PolynomialFeatures
+- sklearn.preprocessing.OneHotEncoder
+- sklearn.preprocessing.SplineTransformer
+- sklearn.metrics.f1_score
+- sklearn.metrics.roc_auc_score
+- sklearn.metrics.roc_curve
+- sklearn.model_selection.train_test_split
+- sklearn.model_selection.ParameterSampler
+- xgboost.XGBClassifier

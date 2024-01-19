@@ -14,8 +14,8 @@
 - Установлена линейная зависимость стоимости квартиры от расстояния до центра города.
 
 ## Стек технологий
-python
-pandas
-matplotlib
-seaborn
+- python
+- pandas
+- matplotlib
+- seaborn
 

@@ -19,20 +19,20 @@
 - По критериям качества предсказания (`(val) RMSE`); скорости предсказания (`Inference time`); времени обучения (`Training time`) была сведена рейтинговая таблица моделей, по которой клиент может посчитать рейтинг нужной ему модели сообразно весам, которые он присвоит критериям. Клиенту был предоставлен механизм оценки обученных моделей на основе вектора его предпочтений.
 
 ## Стек технологий
-python
-pandas
-numpy
-matplotlib
-sklearn.model_selection.cross_val_score
-sklearn.model_selection.RandomizedSearchCV
-sklearn.model_selection.train_test_split
-sklearn.metrics.mean_squared_error
-sklearn.preprocessing.StandardScaler
-sklearn.preprocessing.PolynomialFeatures
-sklearn.preprocessing.OneHotEncoder
-sklearn.preprocessing.OrdinalEncoder
-sklearn.ensemble.RandomForestRegressor
-sklearn.linear_model.LinearRegression
-catboost.CatBoostRegressor
-lightgbm.LGBMRegressor
-time.time
+- python
+- pandas
+- numpy
+- matplotlib
+- sklearn.model_selection.cross_val_score
+- sklearn.model_selection.RandomizedSearchCV
+- sklearn.model_selection.train_test_split
+- sklearn.metrics.mean_squared_error
+- sklearn.preprocessing.StandardScaler
+- sklearn.preprocessing.PolynomialFeatures
+- sklearn.preprocessing.OneHotEncoder
+- sklearn.preprocessing.OrdinalEncoder
+- sklearn.ensemble.RandomForestRegressor
+- sklearn.linear_model.LinearRegression
+- catboost.CatBoostRegressor
+- lightgbm.LGBMRegressor
+- time.time

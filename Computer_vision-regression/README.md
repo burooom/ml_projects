@@ -13,14 +13,15 @@
 - Цель исследования достигнута: получены удовлетворительные результаты модели по метрике МАЕ (меньше 8)
 
 ## Стек технологий
-python
-pandas
-numpy
-tensorflow.keras.preprocessing.image.ImageDataGenerator
-tensorflow.keras.layers.GlobalAveragePooling2D, Dense
-tensorflow.keras.models.Sequential
-tensorflow.keras.preprocessing.image.ImageDataGenerator
-tensorflow.keras.optimizers.Adam
-tensorflow.keras.applications.resnet.ResNet50
+- python
+- pandas
+- numpy
+- tensorflow.keras.preprocessing.image.ImageDataGenerator
+- tensorflow.keras.layers.GlobalAveragePooling2D
+- tensorflow.keras.layers.Dense
+- tensorflow.keras.models.Sequential
+- tensorflow.keras.preprocessing.image.ImageDataGenerator
+- tensorflow.keras.optimizers.Adam
+- tensorflow.keras.applications.resnet.ResNet50
 
 
