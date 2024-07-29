@@ -12,18 +12,18 @@
 В итоге, удалось обучить модель машинного обучения, которая по метрике sMAPE лучше альтернатив, включая константную baseline модель.
 
 ## Стек технологий
-python
-pandas
-numpy
-matplotlib
-seaborn
-sklearn.model_selection.cross_val_score
-sklearn.model_selection.GridSearchCV
-sklearn.model_selection.RandomizedSearchCV
-sklearn.metrics.mean_absolute_error
-sklearn.metrics.make_scorer
-sklearn.preprocessing.StandardScaler
-sklearn.dummy.DummyRegressor
-sklearn.tree.DecisionTreeRegressor
-sklearn.ensemble.RandomForestRegressor
-sklearn.linear_model.LinearRegression
+- python
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- sklearn.model_selection.cross_val_score
+- sklearn.model_selection.GridSearchCV
+- sklearn.model_selection.RandomizedSearchCV
+- sklearn.metrics.mean_absolute_error
+- sklearn.metrics.make_scorer
+- sklearn.preprocessing.StandardScaler
+- sklearn.dummy.DummyRegressor
+- sklearn.tree.DecisionTreeRegressor
+- sklearn.ensemble.RandomForestRegressor
+- sklearn.linear_model.LinearRegression
