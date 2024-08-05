@@ -2,9 +2,9 @@
 
 [HTML](https://github.com/burooom/yp_ml_projects/tree/main/MAINS_LAB_test_case_2024/Clinic_visits_forecast_mains_lab.html)     [ipynb](https://github.com/burooom/yp_ml_projects/tree/main/MAINS_LAB_test_case_2024/Clinic_visits_forecast_mains_lab.ipynb)
 
-[Результаты предсказанные моделью на тестовой выборке] (https://github.com/burooom/yp_ml_projects/tree/main/MAINS_LAB_test_case_2024/nov_23_test_results.csv)
+[Результаты предсказанные моделью на тестовой выборке](https://github.com/burooom/yp_ml_projects/tree/main/MAINS_LAB_test_case_2024/nov_23_test_results.csv)
 
-[Результаты предсказанные моделью на тестовой выборке, а затем округленные] (https://github.com/burooom/yp_ml_projects/tree/main/MAINS_LAB_test_case_2024/nov_23_rounded_test_results.csv)
+[Результаты предсказанные моделью на тестовой выборке, а затем округленные](https://github.com/burooom/yp_ml_projects/tree/main/MAINS_LAB_test_case_2024/nov_23_rounded_test_results.csv)
 
 ## Цели исследования
 Необходимо построить модель, которая предскажет параметр количества посещений клиники в 2023-м году (`number_of_visits_23`) на основе данных о покупателях страховок.
