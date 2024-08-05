@@ -20,3 +20,10 @@
 | 10.   | [Прогнозирование заказов такси](https://github.com/burooom/yp_ml_projects/tree/main/Taxi_orders_forecasting) | Постройка для заказчика модели предсказания количества заказов такси на следующий час| python, pandas, numpy, matplotlib, sklearn, catboost, lightgbm, statsmodels |
 | 11.   | [Обучение модели классификации комментариев](https://github.com/burooom/yp_ml_projects/tree/main/Comments_classification) | Анализ комментариев пользователей на токсичность             | python, pandas, numpy, nltk, tf-idf, sklearn, catboost, lightgbm |
 | 12.   | [Промышленность: обработка стали](https://github.com/burooom/yp_ml_projects/tree/main/Steel_production) |Постройка модели, предсказывающей температуру стали в ходе процесса плавки | python, pandas, numpy, matplotlib, seaborn, scipy, sklearn, lightgbm |
+
+Тестовые задания
+
+| #    | Наименование проекта                | Описание                                                     | Стек                                                         | Дата завершения проекта                                                         |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |------------------ |
+| 1.   | [Мэйнс Лаборатория | MAINS LAB - Предсказание количества страховых обращений в клинику](https://github.com/burooom/yp_ml_projects/tree/main/MAINS_LAB_test_case_2024/) | На основании характеристик застрахованных и истории их обращений за 2022 год требуется предсказать количество визитов за 2023 год.| python, numpy, pandas, matplotlib, scikit-learn, LightGBM | 5.08.2024 |
+
