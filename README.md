@@ -32,23 +32,23 @@
 
 Профессиональные проекты:
 
-    1. [Samokat.tech (проект по матчингу товаров)](https://github.com/burooom/ml_projects/tree/main/Smokat_Goods_matching_kaggle_2024)
+1. [Samokat.tech (проект по матчингу товаров)](https://github.com/burooom/ml_projects/tree/main/Smokat_Goods_matching_kaggle_2024)
 
 Хакатоны:
 
-    1. [Renue.ru - трекинг мусора на конвейерной ленте](https://github.com/burooom/ml_projects/tree/main/Renue_hackathon_2024) |Командный проект, предполагающий разработку решения для задачи отслеживания траектории движения мусора по конвейерной ленте| python, pytorch, numpy, YOLO, matplotlib, OpenCV, json, ultralytics
+1. [Renue.ru - трекинг мусора на конвейерной ленте](https://github.com/burooom/ml_projects/tree/main/Renue_hackathon_2024) |Командный проект, предполагающий разработку решения для задачи отслеживания траектории движения мусора по конвейерной ленте| python, pytorch, numpy, YOLO, matplotlib, OpenCV, json, ultralytics
 
 Соревнования kaggle:
 
-    1. [Samokat.tech (проект по матчингу товаров)](https://github.com/burooom/ml_projects/tree/main/Smokat_Goods_matching_kaggle_2024)
-    2. [Классификация изображений - Journey to Springfield](https://github.com/burooom/ml_projects/tree/main/DL_School_projects)
+1. [Samokat.tech (проект по матчингу товаров)](https://github.com/burooom/ml_projects/tree/main/Smokat_Goods_matching_kaggle_2024)
+2. [Классификация изображений - Journey to Springfield](https://github.com/burooom/ml_projects/tree/main/DL_School_projects)
 
 Тестовые задания:
 
-    1. [Мэйнс Лаборатория (MAINS LAB) - Предсказание количества страховых обращений в клинику](https://github.com/burooom/ml_projects/tree/main/MAINS_LAB_test_case_2024/) | На основании характеристик застрахованных и истории их обращений за 2022 год требуется предсказать количество визитов за 2023 год.| python, numpy, pandas, matplotlib, scikit-learn, LightGBM
+1. [Мэйнс Лаборатория (MAINS LAB) - Предсказание количества страховых обращений в клинику](https://github.com/burooom/ml_projects/tree/main/MAINS_LAB_test_case_2024/) | На основании характеристик застрахованных и истории их обращений за 2022 год требуется предсказать количество визитов за 2023 год.| python, numpy, pandas, matplotlib, scikit-learn, LightGBM
 
 Проекты, реализованные в ходе учебы на курсе Data Scientist от Яндекс.Практикума, 2023 г.:
 
-    [Yandex.Practicum projects](https://github.com/burooom/ml_projects/tree/main/Yandex.Practicum_projects)
+[Yandex.Practicum projects](https://github.com/burooom/ml_projects/tree/main/Yandex.Practicum_projects)
 
 
