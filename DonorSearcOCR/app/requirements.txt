@@ -1,7 +1,8 @@
 -f https://download.pytorch.org/whl/cpu/torch_stable.html
 torch==2.3.1+cpu
 -f https://download.pytorch.org/whl/cpu/torch_stable.html
-albumentations==1.4.14
+albucore==0.0.16
+albumentations==1.4.11
 Pillow==10.1.0
 annotated-types==0.7.0
 anyio==3.7.1

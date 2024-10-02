@@ -3,7 +3,6 @@ import torch
 import logging
 import albumentations as A
 import numpy as np
-import matplotlib.pyplot as plt
 from albumentations.pytorch.transforms import ToTensorV2
 from pathlib import Path
 from PIL import Image
