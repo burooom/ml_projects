@@ -36,7 +36,7 @@ def main(request: Request):
 
 @app.post("/predict-recognize")
 def process_request(file: UploadFile, request: Request):
-    model = prepare_davit(MODEL_NAME, '../weights/davit_weights.pt', 4, DEVICE)
+    model = prepare_davit(MODEL_NAME, '/app/weights/davit_weights.pt', 4, DEVICE)
 
     """save file to the local folder and send the image to the process function"""
     class_name = {0:'0', 1:'90', 2:'180', 3:'270'}
