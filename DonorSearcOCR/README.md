@@ -26,14 +26,17 @@ _____
   ```
 
 ## Стек технологий
-- python
-- pandas
-- torch
-- numpy
-- pillow
-- seaborn
-- albumentations
+- Python
+- Pandas
+- PyTorch
+- NumPy
+- Pillow
+- Seaborn
+- Albumentations
 - sklearn
 - DaViT
 - FastAPI
 - Docker
+
+## TODO:
+Обучить меньшую по количеству параметров модель до таких же или лучших результатов
