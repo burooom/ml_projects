@@ -1,10 +1,10 @@
 **CV**
 | #    | Наименование проекта                | Описание                                                     | Стек                                                         | Дата завершения проекта                                                         |
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |------------------ |
-| 1.   | [DonorSearch - распознавание и классификация медицинских справок](https://github.com/burooom/ml_projects/tree/main/DonorSearcOCR) |Обучение и деплой нейросетевой модели для задачи классификации изображений| - Python, Pandas, PyTorch, NumPy, Pillow, Seaborn, Albumentations, sklearn, DaViT, FastAPI, Docker | 2.10.2024 |
-| 2.   | [Renue.ru - трекинг мусора на конвейерной ленте](https://github.com/burooom/ml_projects/tree/main/Renue_hackathon_2024) |Командный проект, предполагающий разработку решения для задачи отслеживания траектории движения мусора по конвейерной ленте| Python, PyTorch, NumPy, YOLO, Matplotlib, OpenCV, JSON, Ultralytics | 19.09.2024 |
-| 3.   | [Определение возраста покупателей по фото](https://github.com/burooom/ml_projects/tree/main/Yandex.Practicum_projects/Computer_vision-regression) |Подготовка нейросетевой модели для системы компьютерного зрения| Python, Pandas, NumPy, keras | 22.04.2023 |
-| 4.   | [Классификация изображений - Journey to Springfield](https://github.com/burooom/ml_projects/tree/main/DL_School_projects) |Командный проект, предполагающий разработку решения для задачи отслеживания траектории движения мусора по конвейерной ленте| Python, PyTorch, NumPy, resnet, Matplotlib, OpenCV| 31.12.2020 |
+| 1.   | [DonorSearch - распознавание и классификация медицинских справок](https://github.com/burooom/ml_projects/tree/main/DonorSearchOCR) |Обучение и деплой нейросетевой модели для задачи классификации изображений| Python, Pandas, PyTorch, NumPy, Pillow, Seaborn, Albumentations, sklearn, DaViT, FastAPI, Docker | 8.10.2024 |
+| 2.   | [Renue.ru - трекинг мусора на конвейерной ленте](https://github.com/burooom/ml_projects/tree/main/Renue_hackathon_2024) |Командный проект, предполагающий разработку решения для задачи отслеживания траектории движения мусора по конвейерной ленте| Python, PyTorch, NumPy, YOLO, YOLOv10, Matplotlib, OpenCV, JSON, Ultralytics | 19.09.2024 |
+| 3.   | [Определение возраста покупателей по фото](https://github.com/burooom/ml_projects/tree/main/Yandex.Practicum_projects/Computer_vision-regression) |Подготовка нейросетевой модели для системы компьютерного зрения| Python, Pandas, NumPy, Keras | 22.04.2023 |
+| 4.   | [Классификация изображений - Journey to Springfield](https://github.com/burooom/ml_projects/tree/main/DL_School_projects) |Командный проект, предполагающий разработку решения для задачи отслеживания траектории движения мусора по конвейерной ленте| Python, PyTorch, NumPy, ResNet, Matplotlib, OpenCV| 31.12.2020 |
 
 
 **NLP**
@@ -20,7 +20,7 @@
 | 2.   | [Samokat.tech (проект по матчингу товаров)](https://github.com/burooom/ml_projects/tree/main/Smokat_Goods_matching_kaggle_2024) |Необходимо для каждой пары (товар предлагаемый продавцом — товар на площадке) предсказать, является ли она матчем или нет (бинарная классификация)| Python, NumPy, Pandas, SciPy, Matplotlib, sklearn, LightGBM | 8.02.2024 |
 | 3.   | [Промышленность: обработка стали](https://github.com/burooom/ml_projects/tree/main/Yandex.Practicum_projects/Steel_production) |Постройка модели регрессии, предсказывающей температуру стали в ходе процесса плавки | Python, Pandas, NumPy, Matplotlib, Seaborn, SciPy, sklearn, LightGBM |20.05.2023|
 | 4.   | [Прогнозирование заказов такси](https://github.com/burooom/ml_projects/tree/main/Yandex.Practicum_projects/Taxi_orders_forecasting) | Постройка для заказчика модели предсказания количества заказов такси на следующий час на основании анализа временного ряда прошлых заказов| Python, Pandas, NumPy, Matplotlib, sklearn, CatBoost, LightGBM, statsmodels |17.03.2023|
-| 5.   | [Построение модели определения стоимости автомобиля](https://github.com/burooom/ml_projects/tree/main/Yandex.Practicum_projects/Car_pricing_model) | Постройка для заказчика модели определения стоимости автомобиля для использования в приложении сервиса | Python, Pandas, NumPy, time, Matplotlib, sklearn, CatBoost, LightGBM |06.03.2023|
+| 5.   | [Построение модели определения стоимости автомобиля](https://github.com/burooom/ml_projects/tree/main/Yandex.Practicum_projects/Car_pricing_model) | Постройка для заказчика модели определения стоимости автомобиля для использования в приложении сервиса | Python, Pandas, NumPy, Matplotlib, sklearn, CatBoost, LightGBM |06.03.2023|
 | 6.   | [Защита данных клиентов страховой компании](https://github.com/burooom/ml_projects/tree/main/Yandex.Practicum_projects/Insurance) | Разработка метода преобразования данных для защиты данных клиентов страховой компании. Обоснование его корректности | Python, Pandas, NumPy, Matplotlib, sklearn |17.02.2023 |
 | 7.   | [Исследование технологического процесса очистки золота](https://github.com/burooom/ml_projects/tree/main/Yandex.Practicum_projects/Gold_purification) |Подготовка прототипа модели машинного обучения, которая должна предсказать коэффициент восстановления золота из золотосодержащей руды| Python, Pandas, NumPy, Matplotlib, Seaborn, sklearn | 01.02.2023|
 | 8.   | [Определение наиболее выгодного региона нефтедобычи](https://github.com/burooom/ml_projects/tree/main/Yandex.Practicum_projects/Oil_extraction) |Выработка рекомендации о том, в каком регионе разрабатывать новые месторождения для получения наибольшей прибыли для добывающей компании| Python, Pandas, NumPy, Matplotlib, sklearn |23.01.2023|
@@ -32,7 +32,7 @@
 
 Профессиональные проекты:
 
-1. [DonorSearch - распознавание и классификация медицинских справок](https://github.com/burooom/ml_projects/tree/main/DonorSearcOCR)
+1. [DonorSearch - распознавание и классификация медицинских справок](https://github.com/burooom/ml_projects/tree/main/DonorSearchOCR)
 2. [Samokat.tech (проект по матчингу товаров)](https://github.com/burooom/ml_projects/tree/main/Smokat_Goods_matching_kaggle_2024)
 
 Хакатоны:

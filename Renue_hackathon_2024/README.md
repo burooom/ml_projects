@@ -59,7 +59,12 @@
         <td>0.099</td>
         <td>199.10</td>
         <td>61.42</td>
-        <td>-</td>
+        <td>-`track_high_thresh`  0.3,
+                `track_low_thresh` 0.1,
+                `new_track_thresh` 0.6,
+                `match_thresh` 0.1,
+                `proximity_thresh` 0.0,
+                `appearance_thresh` 0.25</td>
     </tr>
     <tr>
         <td>sort</td>
