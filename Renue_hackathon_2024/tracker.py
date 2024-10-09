@@ -19,7 +19,7 @@ def check_path(path):
         else:
             raise argparse.ArgumentTypeError(f"readable_dir:{path} is not a valid path")
 
-class Tracking():
+class Tracking:
     def __init__(self, tracker_type, target_video, model_weights, first_frame,
                  last_frame=None, gt_path=None, make_out_video=False, output_video_path=None, show_video=False):
         self.mm_results = []
@@ -66,24 +66,23 @@ class Tracking():
 
             tracker_args = IterableSimpleNamespace(**
                 {
-                'tracker_type': 'smiletrack',
                 'track_high_thresh': 0.5,
                 'track_low_thresh': 0.1,
                 'new_track_thresh': 0.6,
-                'track_buffer': 30,
                 'match_thresh': 0.8,
-                'fuse_score': True,
-                'gmc_method': 'sparseOptFlow',
                 'proximity_thresh': 0.0,
                 'appearance_thresh': 0.25,
-                'with_reid': True
+                'track_buffer': 30,
+                'fuse_score': True,
+                'with_reid': True,
+                'gmc_method': 'sparseOptFlow'
                 })
             self.tracker = SMILEtrack(tracker_args)
 
     def prepare_det_res(self, res):
-        '''Formats detector's output to proper trackrer input
+        """Formats detector's output to proper tracker input
         since different trackers have different formats of input
-        input: det_results; output: formated det_results'''
+        input: det_results; output: formated det_results"""
         if self.tracker_type == 'deep':
             return [[*ops.xyxy2ltwh(res[0].boxes[i].xyxy.cpu()).tolist(),
                      res[0].boxes[i].conf.cpu().item(),
@@ -97,8 +96,8 @@ class Tracking():
         #             res[0].boxes.conf.cpu()]
 
     def populate_history(self, frame_i, x1, y1, x2, y2, conf, cls, track_id):
-        '''Creating a JSON-like structure "track_history" with
-        xyxy box coordinates, class_ids and center coodinates for each track_id'''
+        """Creating a JSON-like structure "track_history" with
+        xyxy box coordinates, class_ids and center coordinates for each track_id"""
         if self.metrics:
             self.mm_results.append([self.first_frame+frame_i, track_id, x1, y1, x2-x1, y2-y1, -1, int(cls), conf])
         history = self.track_history[int(track_id)]
@@ -111,30 +110,30 @@ class Tracking():
             history['center'].pop(0)
 
     def plot_tracks(self, track_id, frame):
-        '''Plots a track path on the frame if make_out_video==True
-        input: frame; output: frame'''
+        """Plots a track path on the frame if make_out_video==True
+        input: frame; output: frame"""
         points = np.hstack(self.track_history[track_id]['center']).astype(np.int32).reshape((-1, 1, 2))
         cv2.polylines(frame, [points], isClosed=False, color=(230, 230, 230), thickness=4)
         return frame
 
 
     def process_frame(self, frame_i, frame):
-        '''Processes a frame depending on the "tracker_type":
+        """Processes a frame depending on the "tracker_type":
         detection -> tracking -> writing history and making output video with tracks printed;
-        measures detection an tracking time on the per frame basis
-        input: frame; output: frame'''
+        measures detection and tracking time on the per frame basis
+        input: frame; output: frame"""
         if self.tracker_type == 'smile':
             start = time()
             # det_results = self.detect_model.track(frame, persist=True, tracker="smiletrack.yaml")
             det_results = self.detect_model(frame)
             tr_results = self.tracker.update(det_results[0].boxes, frame)
             stop = time()
-            if self.make_out_video:
+            if self.make_out_video or self.show_video:
                 frame = det_results[0].plot()
             # for box, track_id, cls, conf in zip(*self.prepare_det_res(det_results)): # only for the built-in smiletrack
             for x1, y1, x2, y2, track_id, conf, cls, _ in tr_results:
                 self.populate_history(frame_i, x1, y1, x2, y2, conf, cls, track_id)
-                if self.make_out_video:
+                if self.make_out_video or self.show_video:
                     self.plot_tracks(track_id, frame)
 
         elif self.tracker_type == 'deep':
@@ -142,7 +141,7 @@ class Tracking():
             det_results = self.detect_model(frame)
             tr_results = self.tracker.update_tracks(self.prepare_det_res(det_results), frame=frame)
             stop = time()
-            if self.make_out_video:
+            if self.make_out_video or self.show_video:
                 frame = det_results[0].plot()
             for row in tr_results:
                 x1, y1, x2, y2 = row.to_ltrb()
@@ -150,16 +149,18 @@ class Tracking():
                 conf = row.get_det_conf()
                 track_id = int(row.track_id)
                 self.populate_history(frame_i, x1, y1, x2, y2, conf, cls, track_id)
-                if self.make_out_video:
+                if self.make_out_video or self.show_video:
                     self.plot_tracks(track_id, frame)
+        else:
+            raise ValueError("Wrong tracker type option chosen")
 
         self.iter_times.append(timedelta(seconds=stop-start))
         return frame
 
     def track(self):
-        '''Iterates over frames with exception handling if the IndexError is encountered
+        """Iterates over frames with exception handling if the IndexError is encountered
         IndexError means that all the tracks are empty, in this case we just continue iterating
-        writing an empty frame in output video (if make_out_video==True)'''
+        and writing a frame with empty tracks into the output video (if make_out_video==True)"""
         for frame_i, frame in enumerate(self.cap):
             try:
                 frame = self.process_frame(frame_i, frame)
@@ -168,7 +169,9 @@ class Tracking():
 
                 if self.show_video:
                     cv2.namedWindow('video', 0)
-                    cv2.imshow(frame, 'video', 1)
+                    cv2.imshow('video', frame)
+                    if cv2.waitKey(25) & 0xFF == ord('q'):
+                        break
 
             except IndexError:
                 self.empty_tracks.add(self.first_frame+frame_i)
@@ -178,7 +181,7 @@ class Tracking():
                 continue
 
     def write_frame(self, frame_i, frame, empty_tr=False):
-        '''Writes a frame to self.out with a text overlay (frame number) in the left corner'''
+        """Writes a frame to self.out with a text overlay (frame number) in the top-left corner"""
         if empty_tr:
             text = f'{self.first_frame+frame_i} EMPTY TRACK'
             color = (30, 30, 255)
@@ -196,15 +199,15 @@ class Tracking():
         self.out.write(frame)
 
     def history_to_json(self):
-        '''Dumps "track_history" to disk as a JSON file'''
+        """Dumps "track_history" to disk as a JSON file"""
         json_results = json.dumps(self.track_history)
         with open("./tracking_results.json", "w") as json_file:
             json_file.write(json_results)
 
     def mot_metrics(self):
-        '''Computes and returns metrics MOTA, MOTP, Precision, Recall and the number of switches
+        """Computes and returns metrics such as MOTA, MOTP, Precision, Recall and the number of switches
         This is a modified version of the script one can found here: https://github.com/cheind/py-motmetrics
-        as a motMetricsEnhancedCalculator function'''
+        as a motMetricsEnhancedCalculator function"""
         t = np.array(self.mm_results)
         gt = self.gt[np.where(self.gt[:,0] == t[:,0].min())[0].min():
                      np.where(self.gt[:,0] == t[:,0].max())[0].max()+1] #slicing gt at max and min frame numbers found in t
@@ -213,8 +216,8 @@ class Tracking():
             frame += 1 # detection and frame ndef check_path(path):
             gt_dets = gt[gt[:,0]==frame,1:6] # select all detections in gt
             t_dets = t[t[:,0]==frame,1:6] # select all detections in t
-            C = mm.distances.iou_matrix(gt_dets[:,1:], t_dets[:,1:])
-            acc.update(gt_dets[:,0].astype('int').tolist(), t_dets[:,0].astype('int').tolist(), C)
+            c = mm.distances.iou_matrix(gt_dets[:,1:], t_dets[:,1:])
+            acc.update(gt_dets[:,0].astype('int').tolist(), t_dets[:,0].astype('int').tolist(), c)
         mh = mm.metrics.create()
         summary = mh.compute(acc, metrics=['num_frames', 'recall', 'precision', 'num_switches', 'mota', 'motp'], name='acc')
         return summary
@@ -224,8 +227,8 @@ class Tracking():
             print(f'\n {self.mot_metrics()} \n')
 
         if len(self.empty_tracks) > 0:
-            print('Empty track found on frames:')
-            print(self.empty_tracks, '\n')
+            print('Empty tracks found on frames:')
+            print(sorted(list(self.empty_tracks)), '\n')
 
         print(f'''Inference stats:
               \tFrames: {len(self.cap)}
@@ -244,7 +247,7 @@ if __name__ == "__main__":
     parser.add_argument('--output_video_path', type=str, default=Path('./output.mp4'), help='Output path for a processed video')
     parser.add_argument('--model_weights', type=check_path, default=Path('./Models/ultralytics/yolov10x_v2_4_best.pt'), help='YOLO model weights path')
     parser.add_argument('--tracker', type=str, default='smile', choices=['smile', 'deep'], help='Tracker model: ["smile", "deep"]')
-    parser.add_argument('--show_video', action=argparse.BooleanOptionalAction, help='Wheither to show video of tracking or not')
+    parser.add_argument('--show_video', action=argparse.BooleanOptionalAction, help='Whether to show video of tracking or not')
     parser.add_argument('--metrics', action=argparse.BooleanOptionalAction, help='Compute metrics or not')
     parser.add_argument('--make_output_video', action=argparse.BooleanOptionalAction, help='Form a video from tracker`s output')
     parser.add_argument('--first_frame', type=int, default=1, help='Start processing at this frame')
