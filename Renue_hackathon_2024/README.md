@@ -43,7 +43,9 @@
         <td>0.9142</td>
         <td>113.04</td>
         <td>19.93</td>
-        <td>`iou` 0.6 или 0.7, `conf` 0.5, `max_det` 50 или 300</td>
+        <td>iou: 0.6 или 0.7<br>
+            conf: 0.5<br>
+            max_det: 50 или 300</td>
     </tr>
     <tr>
         <td>deep sort</td>
@@ -51,7 +53,10 @@
         <td>0.321</td>
         <td>50.17</td>
         <td>36.09</td>
-        <td>`max_dis_iou` 0.8, `age` 1, `max_cos_dis` 0.3 или 0.1, `n_init` 6</td>
+        <td>max_dis_iou: 0.8<br>
+            age: 1<br>
+            max_cos_dis: 0.3 или 0.1<br>
+            n_init: 6</td>
     </tr>
     <tr>
         <td>smile</td>
@@ -59,12 +64,12 @@
         <td>0.099</td>
         <td>199.10</td>
         <td>61.42</td>
-        <td>`track_high_thresh`  0.3,
-                `track_low_thresh` 0.1,
-                `new_track_thresh` 0.6,
-                `match_thresh` 0.1,
-                `proximity_thresh` 0.0,
-                `appearance_thresh` 0.25</td>
+        <td>track_high_thresh: 0.3<br>
+            track_low_thresh: 0.1<br>
+            new_track_thresh: 0.6<br>
+            match_thresh: 0.1<br>
+            proximity_thresh: 0.0<br>
+            appearance_thresh: 0.25</td>
     </tr>
     <tr>
         <td>sort</td>
@@ -192,8 +197,36 @@ python tracker.py --input_video_path './Videos/test.mp4' --metrics
 ```
 
 ### Авторы
-- [Алексей Новиков](https://github.com/burooom)
+- [Новиков Алексей](https://github.com/burooom)
+    - тестирование Baseline решений Ulatralytics (Bot-SORT, ByteTrack)
+    - тестирование трекера SMILEtrack
+    - портирование SMILEtrack на архитектуру Ultralytics
+    - создание и тестирование python-скрипта `tracker.py`, реализующего запуск из командной строки распознания треков на видео со следующим функционалом:
+        - обрабатывается указанное видео и выводится его версия с размеченными треками
+        - обрабатывает срез фреймов, по которому проводить разметку (если не нужно все видео)
+        - во время обработки выводится видео обработки на экран
+        - рассчитываются метрики MOTA, MOTP, Precision, Reacall, # of Switches
+        - характеристики треков сохраняются в JSON файл на диск
+        - выводится статистика по кол-ву обработанных фреймов, среднему и полному времени инференса
 - [Генчель Ксения](https://github.com/genchel)
-- [filon-mary](https://github.com/filon-mary)
+    - тестирование Baseline решений Ulatralytics (Bot-SORT, ByteTrack)
+    - тестирование трекера DeepSort
+    - дообучение трекера DeepSort по размеченному ground truth участку
+    - подготовка файла итоговой презентации
+    - проведение презентации проекта на финальной встрече с заказчиком
+- [Филонова Мария](https://github.com/filon-mary)
+    - тестирование Baseline решений Ulatralytics (Bot-SORT, ByteTrack)
+    - анализ выходных видеофайлов различных трекеров на предмет оценки качества их работы и формирование отчета по итогу 
+    - выявление по видео особенностей работы выбранного командой трекера (SMILEtrack) 
 - [Бежанов Александр](https://github.com/bezhanovap)
+    - тестирование Baseline решений Ulatralytics (Bot-SORT, ByteTrack)
+    - тестирование трекера SORT
+    - тестирование работы итогового скрипта `tracker.py` на GPU
 - [Павлов-Теремок Дмитрий](https://github.com/DinoWithPython)
+    - тестирование Baseline решений Ulatralytics (Bot-SORT, ByteTrack) с подбором гиперпараметров
+    - тестирование трекера DeepSort с подбором гиперпараметров
+    - интегрирование работы команды по тестированию различных трекеров в общий файл Jupyter Notebook (`analysis.ipynb`), где проведены:
+        - адаптация кода под единый пайплайн
+        - анализ работы каждого трекера (среднее и покадровое время инференса, сведение метрик качества в таблицы)
+        - формулирование общих выводов и рекомендаций по проекту
+    - подготовка структуры проекта (в т.ч. файлов `README.md` и `requirements.txt`) и размещение его на github      
