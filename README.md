@@ -4,7 +4,7 @@
 | 1.   | [DonorSearch - распознавание и классификация медицинских справок](https://github.com/burooom/ml_projects/tree/main/DonorSearchOCR) |Обучение и деплой нейросетевой модели для задачи классификации изображений| Python, Pandas, PyTorch, NumPy, Pillow, Seaborn, Albumentations, sklearn, DaViT, FastAPI, Docker | 8.10.2024 |
 | 2.   | [Renue.ru - трекинг мусора на конвейерной ленте](https://github.com/burooom/ml_projects/tree/main/Renue_hackathon_2024) |Командный проект, предполагающий разработку решения для задачи отслеживания траектории движения мусора по конвейерной ленте| Python, PyTorch, NumPy, YOLO, YOLOv10, Matplotlib, OpenCV, JSON, Ultralytics | 19.09.2024 |
 | 3.   | [Определение возраста покупателей по фото](https://github.com/burooom/ml_projects/tree/main/Yandex.Practicum_projects/Computer_vision-regression) |Подготовка нейросетевой модели для системы компьютерного зрения| Python, Pandas, NumPy, Keras | 22.04.2023 |
-| 4.   | [Классификация изображений - Journey to Springfield](https://github.com/burooom/ml_projects/tree/main/DL_School_projects) |Командный проект, предполагающий разработку решения для задачи отслеживания траектории движения мусора по конвейерной ленте| Python, PyTorch, NumPy, ResNet, Matplotlib, OpenCV| 31.12.2020 |
+| 4.   | [Классификация изображений - Journey to Springfield](https://github.com/burooom/ml_projects/tree/main/DL_School_projects) |Учебный проект от Deep Learning School/МФТИ. Разработка решения для задачи классификации изображений на 42 класса по количеству персонажей мультсериала "Симпсоны"| Python, PyTorch, NumPy, ResNet, Albumentations, Matplotlib, OpenCV| 31.12.2020 |
 
 
 **NLP**
